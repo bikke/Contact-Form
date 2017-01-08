@@ -2,7 +2,8 @@ body, html {
 	font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	color: #181818;
+	background: #e6e6e6;
+	/*color: #181818;*/
 	font-weight: 300;
 	width: 100% !important;
 	height: 100% !important;
@@ -111,7 +112,6 @@ hr {
 	padding: 120px 0 60px 0;
 	/*background: #F6F6F6;*/
 	background: #e6e6e6;
-	color: #888;
 }
 #contact form {
 	padding: 30px 0;

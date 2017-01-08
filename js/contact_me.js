@@ -35,6 +35,7 @@ console.log(univ);
                 },
                 cache: false,
                 success: function() {
+                    $('p').hide();
                     $('form').hide();
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
