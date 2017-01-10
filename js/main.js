@@ -1,9 +1,9 @@
 var myApp = angular.module('myapp', [])
   .controller('attendCtrl', function($scope) {
 
-    $scope.Message1="このイベントは親子で参加できますか？？　　　　　　";//placeholder Message
-    $scope.Message2="ビンゴ大会の景品で、一等賞が「ヒデさんの一発芸、1年分」っていう噂は本当？？　　　　　　";//placeholder Message
-    $scope.Message3="なんかさ、BIKKEの250周年記念パーティーまであと225年かーって思ったらワクワクしすぎて夜も眠れないW　　　　　　";//placeholder Message
+    $scope.Message1="このイベントは親子で参加できますか？？           ";//placeholder Message
+    $scope.Message2="ビンゴ大会の景品で、一等賞が「ヒデさんの一発芸、1年分」っていう噂は本当？？           ";//placeholder Message
+    $scope.Message3="なんかさ、BIKKEの250周年記念パーティーまであと225年かーって思ったらワクワクしすぎて夜も眠れないW           ";//placeholder Message
     $scope.placeholderData1 = $scope.Message1.split("");
     $scope.placeholderData2 = $scope.Message2.split("");
     $scope.placeholderData3 = $scope.Message3.split("");
