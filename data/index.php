@@ -6,8 +6,8 @@
   </head>
   <body>
     <?php
-    
-    $fp = fopen('data/shift_jis.csv', 'r');
+
+    $fp = fopen('shift_jis.csv', 'r');
     while (($data = fgetcsv($fp)) !== FALSE) {
     	echo '<p>';
     	echo $data[0],',';

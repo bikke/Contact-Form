@@ -1,0 +1,7 @@
+AuthUserFile /virtual/narabikke/password_soto/.htpasswd
+AuthName "Please enter BIKKE’s ID and password"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
+
