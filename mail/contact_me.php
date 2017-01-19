@@ -45,10 +45,12 @@ First party: $at1\n
 Second party: $at2\n
 Message:\n
 $message\n\n
----------------------------------------\n
+------------------------------------\n
 BIKKE\n
-Kyoto University Tennis Club Since 1992\n
----------------------------------------";
+Kyoto University Tennis Club Since 1992\n\n
+25周年記念パーティー実行本部\n
+bikkeanniversary@gmail.com\n
+------------------------------------";
 // $headers = "From: noreply@narabikke.com\n";  This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers = "From: Attendance@narabikke.com\n";
 $headers .= "Reply-To: $email_address";
