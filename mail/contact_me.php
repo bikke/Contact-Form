@@ -1,71 +1,44 @@
 <?php
-// Check for empty fields
-if(empty($_POST['name1'])  		||
-   empty($_POST['name2'])  		||
-   empty($_POST['email']) 		||
-   empty($_POST['univ']) 		||
-   empty($_POST['at1']) 		||
-   empty($_POST['at2']) 		||
-   empty($_POST['message'])	||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-	echo "No arguments Provided!";
-	return false;
-   }
-   mb_convert_variables('Shift_JIS', 'UTF-8', $_POST);//encodingをutf-8からshift_jisに変換
-$name1 = $_POST['name1'];
-$name2 = $_POST['name2'];
-$email_address = $_POST['email'];
-$univ = $_POST['univ'];
-$at1 = $_POST['at1'];
-$at2 = $_POST['at2'];
-$message = $_POST['message'];
-// Create the email and send the message
-$to = 'bikke015@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "RSVP";
-$email_subject2 = "RSVP To:  BIKKE 25th Anniversary Party";
-$email_body = "You have received the attendance confirming information.\n\n".
-"Here are the details:\n\n
-Name: $name1\n
-BikkeName: $name2\n
-Email: $email_address\n
-Year of admission: $univ\n
-First party: $at1\n
-Second party: $at2\n
-Message:\n
-$message\n\n";
 
-$email_body2 = "Thank you for your RSVP.\n\n".
-"Here are the details:\n\n
-Name: $name1\n
-BikkeName: $name2\n
-Email: $email_address\n
-Year of admission: $univ\n
-First party: $at1\n
-Second party: $at2\n
-Message:\n
-$message\n\n
-------------------------------------\n
-BIKKE\n
-Kyoto University Tennis Club Since 1992\n\n
-25周年記念パーティー実行本部\n
-bikkeanniversary@gmail.com\n
-------------------------------------";
-// $headers = "From: noreply@narabikke.com\n";  This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers = "From: Attendance@narabikke.com\n";
-$headers .= "Reply-To: $email_address";
-$headers2 = "From: Bikke@narabikke.com\n";
-mail($to,$email_subject,$email_body,$headers);
-mail($email_address,$email_subject2,$email_body2,$headers2);
+$q1 = $_POST['q1'];
+$q2 = $_POST['q2'];
+$q3 = $_POST['q3'];
+$q4 = $_POST['q4'];
+$q5 = $_POST['q5'];
+$q6 = $_POST['q6'];
+$q7 = $_POST['q7'];
+$q8 = $_POST['q8'];
+$q9 = $_POST['q9'];
+$message = $_POST['message'];
+
+// // Create the email and send the message
+// $to = 'yutakafumimario527@gmail.com';
+// $email_subject = "RSVP";
+// // $email_subject2 = "RSVP To:  BIKKE";
+// $email_body = "You have received the attendance confirming information.\n\n".
+// "Here are the details:\n\n
+// BikkeName: $name2\n
+// Year of admission: $univ\n
+// First party: $q1\n
+// Message:\n
+// $message\n\n";
+// $headers = "From: Attendance@narabikke.com\n";
+// mail($to,$email_subject,$email_body,$headers);
 
 // csv
+$ShiftJIS = $_POST;//書き込むデータ
+mb_convert_variables('Shift_JIS', 'UTF-8', $ShiftJIS);//Exelがshift_jisに対応
 
 $fp = fopen('data.csv','a');
-$return = fputcsv($fp, $_POST);
+$return = fputcsv($fp, $ShiftJIS);
 fclose($fp);
 
 $fp = fopen('../data/shift_jis.csv','a');
-$return = fputcsv($fp, $_POST);//予備
+$return = fputcsv($fp, $ShiftJIS);//shift_jis data
+fclose($fp);
+
+$fp = fopen('../data/utf.csv','a');
+$return = fputcsv($fp, $_POST);//utf-8 data
 fclose($fp);
 
 return true;

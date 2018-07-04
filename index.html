@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>Kyoto University Tennis Club Bikke</title>
+<title>Questionnair</title>
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="keywords" content="">
@@ -25,164 +25,228 @@
 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <div class="preloader"></div>
+  <!-- <div class="preloader"></div> -->
 
-    <!-- Contact Section -->
-    <div class="contents">
-      <div id="contact" class="text-center">
-        <div class="container" ng-controller="attendCtrl">
-          <div class="section-title center">
-            <h2>２５周年記念パーティー出欠確認</h2>
-            <hr>
-            <p>25周年記念パーティーは5/4(Thu)の14:00~17:00、奈良ロイヤルホテルにて開催予定です。みなさんのご参加をお待ちしております。<br>
-お手数ですが、すべてのフォームに回答をお願いします。また、備考欄にはご意見や質問事項等をご自由にお書きください。 </p>
-          </div>
-          <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal" name="sentMessage" id="contactForm" novalidate>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" id="name1" class="form-control" placeholder="本名" required="required" ng-model="name1">
-                    <p class="help-block text-danger"></p>
+  <!-- Contact Section -->
+  <div class="contents text-center">
+    <div id="contact">
+      <div class="container" ng-controller="attendCtrl">
+        <div class="section-title">
+          <h2>アンケート</h2>
+          <hr>
+          <p>Select your answer</p>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          <form class="form-horizontal" name="sentMessage" id="contactForm" novalidate>
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block  ">Q1</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q1" name ="q1" class="required form-control" ng-model="q1" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q2</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q2" name ="q2" class="required form-control" ng-model="q2" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q3</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q3" name ="q3" class="required form-control" ng-model="q3" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q4</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q4" name ="q4" class="required form-control" ng-model="q4" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                  <option value="c">c</option>
+                  <option value="d">d</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q5</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q5" name ="q5" class="required form-control" ng-model="q5" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q6</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q6" name ="q6" class="required form-control" ng-model="q6" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q7</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q7" name ="q7" class="required form-control" ng-model="q7" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q8</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q8" name ="q8" class="required form-control" ng-model="q8" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+            <div class="row text-left">
+              <div class="col-md-6 col-xs-12">
+                <p class="help-block">Q9</p>
+              </div>
+              <div class="col-md-4 col-xs-8">
+                <select id="q9" name ="q9" class="required form-control" ng-model="q9" required data-validation-required-message="選択して下さい">
+                  <option value="a">a</option>
+                  <option value="b">b</option>
+                  <option value="c">c</option>
+                  <option value="d">d</option>
+                  <option value="e">e</option>
+                </select>
+              </div>
+              <span ng-show="sentMessage.attend1.$error.required">必須</span>
+            </div>
+            <br>
+
+
+
+            <div class="row text-left">
+              <div class="col-md-12 col-xs-12">
+                <p class="help-block  ">Q10
+                </p>
+              </div>
+            </div>
+            <div class="form-group col-md-12 col-xs-12">
+              <textarea name="message" id="message" class="form-control" rows="4" placeholder="e.g., {{placeholder}}" ng-model="message"></textarea>
+            </div>
+
+
+
+
+            <!-- <button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg" ng-disabled="sentMessage.$invalid">　確認画面へ　</button> -->
+            <button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg" ng-show="validity"  ng-disabled="sentMessage.$invalid">　確認画面へ　</button>
+            <!-- Modal -->
+            <div id="confirm_Modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" >　Confirm　</h4>
+                  </div>
+                  <div class="modal-body" style="text-align:left;">
+                    <table class='table'>
+                      <tr><td>Q1</td> <td>{{q1}}</td></tr>
+                      <tr><td>Q2</td> <td>{{q2}}</td></tr>
+                      <tr><td>Q3</td> <td>{{q3}}</td></tr>
+                      <tr><td>Q4</td> <td>{{q4}}</td></tr>
+                      <tr><td>Q5</td> <td>{{q5}}</td></tr>
+                      <tr><td>Q6</td> <td>{{q6}}</td></tr>
+                      <tr><td>Q7</td> <td>{{q7}}</td></tr>
+                      <tr><td>Q8</td> <td>{{q8}}</td></tr>
+                      <tr><td>Q9</td> <td>{{q9}}</td></tr>
+                      <tr><td>Q10</td> <td>{{message}}</td></tr>
+
+                  </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-custom btn-lg" data-dismiss="modal">　Back　</button>
+                    <button type="submit" class="btn btn-custom btn-lg" ng-click="send()">　Send Message　</button>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text" id="name2" class="form-control" placeholder="びっけネーム" required="required" ng-model="name2">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input type="email" id="email1" class="form-control" placeholder="Email" required="required" ng-model="mail1">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
+              </div>
+            </div>
 
-              </div>
-              <div class="row">
-                <div class="col-md-6 col-xs-6">
-                  <p class="help-block text-danger">大学入学年度</p>
-                </div>
-                <div class="col-md-4 col-xs-6">
-                  <select id="univ" class="form-control" ng-model="univ" required="required">
-                    <option value="1990(H2)">1990(H2)</option>
-                    <option value="1991(H3)">1991(H3)</option>
-                    <option value="1992(H4)">1992(H4)</option>
-                    <option value="1993(H5)">1993(H5)</option>
-                    <option value="1994(H6)">1994(H6)</option>
-                    <option value="1995(H7)">1995(H7)</option>
-                    <option value="1996(H8)">1996(H8)</option>
-                    <option value="1997(H9)">1997(H9)</option>
-                    <option value="1998(H10)">1998(H10)</option>
-                    <option value="1999(H11)">1999(H11)</option>
-                    <option value="2000(H12)">2000(H12)</option>
-                    <option value="2001(H13)">2001(H13)</option>
-                    <option value="2002(H14)">2002(H14)</option>
-                    <option value="2003(H15)">2003(H15)</option>
-                    <option value="2004(H16)">2004(H16)</option>
-                    <option value="2005(H17)">2005(H17)</option>
-                    <option value="2006(H18)">2006(H18)</option>
-                    <option value="2007(H19)">2007(H19)</option>
-                    <option value="2008(H20)">2008(H20)</option>
-                    <option value="2009(H21)">2009(H21)</option>
-                    <option value="2010(H22)">2010(H22)</option>
-                    <option value="2011(H23)">2011(H23)</option>
-                    <option value="2012(H24)">2012(H24)</option>
-                    <option value="2013(H25)">2013(H25)</option>
-                    <option value="2014(H26)">2014(H26)</option>
-                    <option value="2015(H27)">2015(H27)</option>
-                    <option value="2016(H28)">2016(H28)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="help-block text-danger">25周年記念パーティーへの出席</p>
-                </div>
-                <div class="col-md-4">
-                  <label class="radio-inline">
-                    <input type="radio" name="attend1" id="attend1" value="出席" required ng-model="at1"> 出席
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="attend1" id="attend1" value="欠席" required ng-model="at1"> 欠席
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="attend1" id="attend1" value="未定" required ng-model="at1"> 未定
-                  </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <p class="help-block text-danger">さらなる２次会への出席</p>
-                </div>
-                <div class="col-md-4">
-                  <label class="radio-inline">
-                    <input type="radio" name="attend2" id="attend2" value="出席" required ng-model="at2"> 出席
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="attend2" id="attend2" value="欠席" required ng-model="at2"> 欠席
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="attend2" id="attend2" value="未定" required ng-model="at2"> 未定
-                  </label>
-                </div>
-
-              </div>
-              <div class="form-group">
-                <textarea name="message" id="message" class="form-control" rows="4" placeholder="（備考欄） e.g.:{{placeholder}}" ng-model="message"></textarea>
-                <p style="text-align:right;">{{message.length}}<p>
-                <p class="help-block text-danger"></p>
-              </div>
-
-              <button type="button" class="btn btn-custom btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg" ng-disabled="sentMessage.$invalid">確認画面へ</button>
-              <!-- Modal -->
-              <div id="confirm_Modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" >　確認ページ　</h4>
-                    </div>
-                    <div class="modal-body" style="text-align:left;">
-                      <p>
-                      名前（本名）　：{{name1}}<br>
-                      びっけネーム　：{{name2}}<br>
-                      メールアドレス：{{mail1}}<br>
-                      入学年度　　　：{{univ}}<br>
-                      一次会の出欠　：{{at1}}<br>
-                      二次会の出欠　：{{at2}}<br>
-                      備考　　　　　：{{message}}<br></p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-custom btn-lg" data-dismiss="modal">　Back　</button>
-                      <button type="submit" class="btn btn-custom btn-lg" ng-click="send()">　Send Message　</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </form>
-            <div id="success"></div>
-            <div id="gohome"></div>
-          </div>
+          </form>
+          <div id="success"></div>
+          <!-- <div id="gohome"></div> -->
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="container">
-        <div class="fnav">
-          <p>&copy; 2016 bikke.</p>
-        </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <div class="fnav">
+        <p>&copy; footer</p>
       </div>
     </div>
+  </div>
 
   <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
   <script type="text/javascript" src="js/contact_me.js"></script>
-  <script type="text/javascript" src="js/pace.js"></script><!--loading-->
+  <!-- <script type="text/javascript" src="js/mt.js"></script> -->
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+    $(function(){//Enter key無効
+        $("input").on("keydown", function(e) {
+            if ((e.which && e.which === 13) || (e.keyCode && e.keyCode === 13)) {
+                return false;
+            } else {
+                return true;
+            }
+        });
+    });
+</script>
 </body>
 </html>

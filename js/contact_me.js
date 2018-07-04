@@ -1,37 +1,40 @@
 $(function() {
-
     $("input,textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
-            // additional error messages or events
+            console.log('submit error');
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name1 = $("input#name1").val();
-            var name2 = $("input#name2").val();
-            var email1 = $("input#email1").val();
-            var univ = $("select#univ").val();
-            var at1 = $("input#attend1:checked").val();
-            var at2 = $("input#attend2:checked").val();
+
+            var q1 = $("select#q1").val();
+            var q2 = $("select#q2").val();
+            var q3 = $("select#q3").val();
+            var q4 = $("select#q4").val();
+            var q5 = $("select#q5").val();
+            var q6 = $("select#q6").val();
+            var q7 = $("select#q7").val();
+            var q8 = $("select#q8").val();
+            var q9 = $("select#q9").val();
             var message = $("textarea#message").val();
-            var BikkeName = name2; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (BikkeName.indexOf(' ') >= 0) {
-                BikkeName = name2.split(' ').slice(0, -1).join(' ');
-            }
-console.log(univ);
+
+            console.log('q1=' + q1);
+            // console.log('group='+group_num);
             $.ajax({
                 url: "mail/contact_me.php",
                 type: "POST",
                 data: {
-                    name1: name1,
-                    name2: name2,
-                    email: email1,
-                    univ: univ,
-                    at1: at1,
-                    at2: at2,
+                    q1: q1,
+                    q2: q2,
+                    q3: q3,
+                    q4: q4,
+                    q5: q5,
+                    q6: q6,
+                    q7: q7,
+                    q8: q8,
+                    q9: q9,
                     message: message
+
                 },
                 cache: false,
                 success: function() {
@@ -40,10 +43,10 @@ console.log(univ);
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>ありがとうございました(・ω・)ノ</strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-                    $('#gohome').html("<a>HOMEへ</a>");
+                    $('#gohome').html("<a>HOME</a>");
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
@@ -52,7 +55,7 @@ console.log(univ);
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                        $('#success > .alert-danger').append("<strong>Sorry " + BikkeName + ", it seems that my mail server is not responding. Please try again later!");                    $('#success > .alert-danger').append('</div>');
+                        $('#success > .alert-danger').append("<strong>Sorry it seems that my mail server is not responding. Please try again later!");                    $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
@@ -78,6 +81,6 @@ $('#name').focus( ()=> {
 /*gohome*/
 $('#gohome').on('click', function() {
   // alert("ホームページに移動します");
-  location.replace('http://www.narabikke.com/hp_one');
+  location.replace('http://www.narabikke.com/');
 
 });

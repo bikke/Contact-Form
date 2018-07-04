@@ -1,11 +1,16 @@
 var myApp = angular.module('myapp', [])
   .controller('attendCtrl', function($scope) {
+    $scope.group_num = 1;
+    $scope.validity = true;
+    console.log($scope.validity);
+    $scope.tens_place = 0;
 
-    $scope.Message1 = "このイベントは親子で参加できますか？？           ";
-    $scope.Message2 = "特になし           ";
-    $scope.Message3 = "ビンゴ大会の景品で、一等賞が「ヒデさんの一発芸、1年分!」っていう噂は本当？？           ";
-    $scope.Message4 = "なんかさ、BIKKEの250周年記念パーティーまであと225年かーって思ったらワクワクしすぎて夜も眠れないW           ";
-    $scope.Message5 = "（・ω・）ノ         ";
+
+    $scope.Message1 = "test message1              ";
+    $scope.Message2 = "test message2              ";
+    $scope.Message3 = "test message3              ";
+    $scope.Message4 = "test message4              ";
+    $scope.Message5 = "test message5              ";
     $scope.placeholderData1 = $scope.Message1.split("");
     $scope.placeholderData2 = $scope.Message2.split("");
     $scope.placeholderData3 = $scope.Message3.split("");
@@ -52,6 +57,7 @@ var myApp = angular.module('myapp', [])
             $scope.Message_Data = $scope.placeholderData1;
           }
         });
+        // console.log($scope.placeholder);
         return update();
       },70);
     };
@@ -60,7 +66,14 @@ var myApp = angular.module('myapp', [])
     update();// placeholder update 実行!
 
     $scope.send = function() {
+      // clearTimeout($scope.timeout_job);// placeholderの更新の停止
+      console.log('ok')
       $('#confirm_Modal').modal('hide');
     }
 
+      $scope.group_num = $scope.num;
+      $scope.validity = true;
+      console.log($scope.validity);
+      $scope.tens_place = 0;
+    // }
   });

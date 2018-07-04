@@ -2,7 +2,7 @@ body, html {
 	font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
-	background: #e6e6e6;
+	background: #e6ffe9;//#e6e6e6
 	/*color: #181818;*/
 	font-weight: 300;
 	width: 100% !important;
@@ -29,13 +29,30 @@ h5 {
 	line-height: 20px;
 }
 p {
+	font-weight: 800;
 	font-size: 16px;
 	color: #181818
+}
+.row p {
+	float: left;
 }
 p.intro {
 	font-size: 16px;
 	margin: 12px 0 0;
 	line-height: 24px;
+}
+.section-title p {
+	float: none;
+	color: #0B614B;
+}
+#footer p {
+	float: none;
+}
+button {
+	font-weight: 800;
+}
+#contact textarea {
+	/*margin-top: 30px;*/
 }
 a {
 	color: #0ba2db;
@@ -126,6 +143,7 @@ label {
 	font-family: 'Open Sans', sans-serif;
 	float: left;
 }
+
 #contact .form-control {
 	display: block;
 	width: 100%;
@@ -371,4 +389,13 @@ to {
 /* mordal */
 #top_modal {
 	text-align: center;
+}
+
+#group-number {
+	font-weight: 500;
+	padding: 8px;
+	width: 46%;
+	height: 125%;
+	background-color: #ffffff;
+
 }
